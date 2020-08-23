@@ -1,12 +1,21 @@
 # Resolve the problem!!
 import string
+from random import randrange, choice
 
 SYMBOLS = list('!"#$%&\'()*+,-./:;?@[]^_`{|}~')
 
 
 def generate_password():
     # Start coding here
-
+    simbolos = list('!"#$%&\'()*+,-./:;?@[]^_`{|}~')
+    letter_lower = list('abcdefghijkmnlopqrstuvxyz')
+    letter_upper = list('ABCDEFGHIJKMNLOPQRSTUVWXYZ')
+    numbers = list('1234567890')
+    def secure():
+        return choice(simbolos)+choice(letter_lower)+choice(letter_upper)+choice(numbers)
+    password = secure() + secure() + secure()
+    return password
+generate_password()
 
 def validate(password):
 
